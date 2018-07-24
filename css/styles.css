@@ -1,0 +1,226 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Kurale', serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  left: -9999px;
+  top: -9999px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.sidebar-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+  width: 200px;
+}
+
+.button {
+  color: #1EAEDB;
+  margin-bottom: 2px;
+  background-color: rgba(255, 255, 255, .5);
+  border: none;
+}
+
+.button:hover {
+  background-color: rgba(124, 32, 222, .6);
+  color: #ffffff;
+  -webkit-transition: ease-in-out .3s;
+  -o-transition: ease-in-out .3s;
+  transition: ease-in-out .3s;
+}
+
+.button {
+  display: block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0;
+}
+
+.button-primary:hover {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB;
+}
+
+.btn-toggle {
+  display: none;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main-table {
+  font-size: 18px;
+  border-collapse: collapse;
+  text-align: center;
+  margin-left: auto;
+  width: calc(100% - 200px);
+}
+
+.first-row th {
+  background: #AFCDE7;
+  color: #FFF;
+  padding: 10px 20px;
+}
+
+.main-table th,
+.main-table td {
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: #fff;
+}
+
+.main-table td {
+  background: #D8E6F3;
+  padding: 10px;
+}
+
+.button-action {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+
+.button-edit {
+  background-image: url(../img/pencil.svg);
+}
+
+
+.button-del {
+  background-image: url(../img/delete.svg);
+}
+
+@media screen and (max-width: 968px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .sidebar-list {
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    width: 100%;
+  }
+  .sidebar-list li {
+    -ms-flex-preferred-size: 33%;
+    flex-basis: 33%;
+  }
+  .sidebar-list a {
+    width: 95%;
+    margin-bottom: 2px;
+  }
+  .main-table {
+    border: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .sidebar-list li {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .sidebar-list {
+    display: none;
+    position: absolute;
+    top: 40px;
+    background-color: #eee;
+    
+  }
+  
+  .btn-toggle {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .sidebar-list li {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+  .sidebar-list a {
+    width: 100%;
+  }
+}
